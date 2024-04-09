@@ -1,0 +1,13 @@
+CRASH REPORT 2024-4-9 at 20:58.18
+Don't be sad. I'll do better next time, I promise!
+
+Traceback (most recent call last):
+  File "c:\Users\pancr\Desktop\super-bert-bros-master\main.py", line 13, in <module>
+    main()
+  File "c:\Users\pancr\Desktop\super-bert-bros-master\game.py", line 55, in main
+    characters = character_selection_screen("Player 1", "random", "Player 2", "random")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\pancr\Desktop\super-bert-bros-master\screen\character_selection.py", line 61, in character_selection_screen
+    player1_char = character_names[player1_character]
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'StringVar'

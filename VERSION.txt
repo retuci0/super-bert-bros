@@ -1,0 +1,38 @@
+------------------------------------------------------
+------------ CHANGELOG FOR v1.1 [9/IV/24] ------------
+------------------------------------------------------
+
+
+Added:
+    Fixed a bug where you could drag the opponent towards you instead of pushing it back when throwing a projectile and changing direction quickly
+    Better project structure (added folders instead of just keeping all files in the root dir)
+    A weight attribute to determine how much knockback each character takes (e. g.: 1 --> default, 1.5 --> lighter, 0.5 --> heavier)
+    Player names, in the part where health and lives are shown. Still very crappy
+    Made player names and characters save when you change characters
+
+
+To add yet:
+    Multiple scenarios
+    Actual functionality to attack and damage sprites
+    More SFX and music
+    Actual double jump, not the glitch
+    Melee attacks (imagine still having to add attacks in a fighting game)
+    Special attacks (like in the smashing bros game omg omg nintendo gunna sue me)
+    Fix shit ig
+
+
+Known issues:
+    Player names don't save in the characters selection screen, which means if player 1 is named "d", when you change characters, in the name field, it won't show "d",
+        even though it's supposed to
+    Players can still double jump when spamming the jump button, and for some reason they are more likely to do it when the cursor is moving or
+        both players are jumping at the same time. I'm not sure why the last part is a thing, but I know you can double jump because in the jump method,
+        it checks if you're colliding with a platform, and if so, it sets your dy to 0. Then, it checks if your dy is 0, and if it is, you jump. But you're
+        at yor highest point in the air (when the actual jump ends), before you fall, your dy is 0, because you don't move for like a frame, before falling again.
+        If you happen to call the jump method right at that point, you will double jump.
+    Players get instantly tp'd to the top of a platform if they collide with it's sides (yes, it's a bug)
+    Hitboxes are not aligned perfectly with the player when it's moving or jumping
+    Projectiles can traspass the big platform
+    Game might crash with code 3489660927 when you spam projectiles. I've got no clue why, but it might
+
+
+life is like a cock, women make it hard  - sun tzu, the art of cringe
